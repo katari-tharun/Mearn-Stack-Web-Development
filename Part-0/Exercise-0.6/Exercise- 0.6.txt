@@ -1,0 +1,4 @@
+title Exercise- 0.6
+
+browser->server: HTTP Post https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: {"message":"note created"}

@@ -1,0 +1,25 @@
+title Exercise - 0.4
+browser->server: HTTP Post https://studies.cs.helsinki.fi/exampleapp/new_note
+server-->browser: http status code 302
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML-code will be displayed
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css will be displayed
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: 'main.js' will be displayed
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{"content":"Tharun","date":"2021-05-26T14:26:40.900Z"}]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
